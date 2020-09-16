@@ -1,0 +1,1 @@
+This is the directory for the holbertonschool-low_level_programming project.
