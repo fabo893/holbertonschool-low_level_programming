@@ -1,8 +1,8 @@
 #include <stdio.h>
 /**
  *
- * main - Prins the values of all the types on the computer.
- * Return: Must be 0 to work
+ * main - entry point
+ * Return: always 0 (sucess)
  */
 int main(void)
 {
