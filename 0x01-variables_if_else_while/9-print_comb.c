@@ -1,7 +1,10 @@
 #include <unistd.h>
 #include <stdio.h>
-/*
- * main
+
+/**
+ *main - entry point
+ *
+ *Return - always 0 (sucess)
  */
 int main(void)
 {
