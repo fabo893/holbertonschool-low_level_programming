@@ -1,18 +1,17 @@
+#include <unistd.h>
 #include <stdio.h>
-
-/**
- * main - Entry point
- *
- * Return: Always 0 (Success)
+/*
+ * main
  */
 int main(void)
 {
-int i;
-
-for (i = 0; i < 10; i++)
+int c;
+c = '0';
+while (c <= '9')
 {
-putchar(i);
-if (i != 9)
+putchar(c);
+c = c + 1;
+if (c <= '9')
 {
 putchar(',');
 putchar(' ');
