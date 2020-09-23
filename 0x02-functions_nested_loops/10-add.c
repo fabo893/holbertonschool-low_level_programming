@@ -6,7 +6,10 @@
  * @y: second int parameter
  * Return: sum integers
  */
-int add(int x, int y)
+int add(int, int)
 {
+	int x;
+	int y;
+
 	return (x + y);
 }
