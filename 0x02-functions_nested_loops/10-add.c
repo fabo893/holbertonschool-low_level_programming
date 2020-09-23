@@ -6,7 +6,7 @@
  * @y: second int parameter
  * Return: z int addition
  */
-int ad(int x, int y)
+int add(int x, int y)
 {
 	int i = x + y;
 
