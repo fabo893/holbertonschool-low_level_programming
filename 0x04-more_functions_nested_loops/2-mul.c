@@ -1,11 +1,11 @@
 #include "holberton.h"
 
 /**
- * mul - prototype function
- * @a; variable int c
- * @b; variable int c
+ * mul - multiplies two integers.
+ * @a; first variable
+ * @b; second variable
  *
- * Return: result of multiplication
+ * Return: result of multiplication.
  */
 
 int mul(int a, int b)
