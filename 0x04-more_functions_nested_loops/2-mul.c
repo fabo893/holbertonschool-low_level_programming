@@ -2,8 +2,8 @@
 
 /**
  * mul - multiplies two integers.
- * @a; first variable
- * @b; second variable
+ * @a: first variable
+ * @b: second variable
  *
  * Return: result of multiplication.
  */
