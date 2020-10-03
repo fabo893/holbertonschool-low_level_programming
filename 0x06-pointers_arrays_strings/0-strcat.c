@@ -1,7 +1,7 @@
 #include "holberton.h"
 
 /**
- * _strcat: pointer
+ * *_strcat: pointer
  * @dest: first parameter
  * @src: second parameter
  * Return: return a pointer to 'dest'
