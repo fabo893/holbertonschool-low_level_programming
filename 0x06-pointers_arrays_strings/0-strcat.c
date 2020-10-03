@@ -1,10 +1,10 @@
 #include "holberton.h"
 
 /**
- * *_strcat: pointer
- * @dest: first parameter
- * @src: second parameter
- * Return: return a pointer to 'dest'
+ * *_strcat - function
+ * @dest: - char pointer
+ * @src: - char pointer
+ * Return: return a pointer
  */
 char *_strcat(char *dest, char *src)
 {
