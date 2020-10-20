@@ -9,17 +9,22 @@
  */
 char *_strchr(char *s, char c)
 {
-  int x;
+	int x;
 
-  for (x = 0; s[x] != '\0'; x++)
-    {
-      if (s[x] == c)
-	return (&s[x]);
-      else if (s[x] == '\0')
+	for (x = 0; s[x] != '\0'; x++)
+	{
+		if (s[x] == c)
+		{
+			return (&s[x]);
+		}
+		else if (s[x] == '\0')
+		{
+			return (NULL);
+		}
+	}
+	if (c == '\0')
+	{
+		return (&s[x]);
+	}
 	return (NULL);
-    }
-  if (c == '\0')
-    return (&s[x]);
-
-  return (NULL);
 }
