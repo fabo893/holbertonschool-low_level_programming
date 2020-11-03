@@ -1,5 +1,9 @@
 #include <stdio.h>
 
+/**
+ * main - print all possible combinations
+ * Return: On success, always 0
+ */
 int main() {
 
   int i, x, y;
