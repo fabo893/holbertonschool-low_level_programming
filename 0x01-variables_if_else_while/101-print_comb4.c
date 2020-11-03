@@ -4,7 +4,7 @@
  * main - print all possible combinations
  * Return: On success, always 0
  */
-int main() {
+int main(void) {
 
   int i, x, y;
 
