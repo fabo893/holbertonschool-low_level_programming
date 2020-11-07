@@ -8,7 +8,7 @@
  */
 int clear_bit(unsigned long int *n, unsigned int index)
 {
-	unsigned int setBit = 1;
+	unsigned long int setBit = 1;
 
 	if (n == NULL)
 		return (-1);
