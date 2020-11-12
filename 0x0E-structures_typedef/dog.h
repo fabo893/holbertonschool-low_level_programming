@@ -4,6 +4,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+/* _PUTCHAR */
+int _putchar(char c);
+
+
 /* TASK 0 */
 
 /**
@@ -29,5 +33,8 @@ void init_dog(struct dog *d, char *name, float age, char *owner);
 
 
 
+/* TASK 2 */
+
+void print_dog(struct dog *d);
 
 #endif /* DOG_H */
