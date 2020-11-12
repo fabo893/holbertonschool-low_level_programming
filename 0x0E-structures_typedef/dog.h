@@ -2,6 +2,9 @@
 #define DOG_H
 
 #include <stdio.h>
+#include <stdlib.h>
+
+/* TASK 0 */
 
 /**
  * struct dog - define a struct dog.
@@ -17,6 +20,14 @@ struct dog
 	float age;
 	char *owner;
 };
+
+
+
+/* TASK 1 */
+
+void init_dog(struct dog *d, char *name, float age, char *owner);
+
+
 
 
 #endif /* DOG_H */
