@@ -1,23 +1,60 @@
 #include "dog.h"
-
 /**
- * *new_dog - pointer to a dog_t to create a new dog
- * @name: pointer to a char to give a name
- * @age: float variable
- * @owner: pointer to a char to give an owner
- * Return: On fails, NULL
+ * _strdup - returns a pointer to a new string which is a duplicate
+ * of the string str.
+ * @str: string to duplicate
+ *
+ * Return: On success, the _strdup function returns a pointer to the duplicated
+ * string. It returns NULL if insufficient memory was available
+ */
+char *_strdup(char *str)
+{
+	int len;
+	char *dup;
+
+	if (str == NULL)
+		return (NULL);
+	for (len = 0; str[len] != '\0'; len++)
+		;
+	dup = malloc((sizeof(char) * len) + 1);
+	if (dup == NULL)
+		return (NULL);
+
+	while (len >= 0)
+	{
+		dup[len] = str[len];
+		len--;
+	}
+
+	return (dup);
+}
+/**
+ * new_dog - creates a new dog, makes the malloc requesta dn handles
+ * initialization
+ * @name: name for the dog
+ * @age: age of the dog
+ * @owner: name of the dog's servant
+ *
+ * Return: NULL if the function fails, pointer to new dog.
  */
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	struct dog *newdog;
+	dog_t *d;
 
-	newdog = malloc(sizeof(struct dog));
-	if (newdog == NULL)
+	d = malloc(sizeof(dog_t));
+	if (d == NULL)
 		return (NULL);
 
-	newdog->name = name;
-	newdog->age = age;
-	newdog->owner = owner;
+	d->name = _strdup(name);
+	if (d->name == NULL)
+		free(d);
+	d->age = age;
+	d->owner = _strdup(owner);
+	if (d->owner == NULL)
+	{
+		free(d->name);
+		free(d);
+	}
 
-	return (newdog);
+	return (d);
 }
