@@ -1,39 +1,42 @@
 #include "lists.h"
-
 /**
- * *add_node_end - adds a new node at the end of a list_t list.
- * @head: pointer to head element of list
- * @str: pointer to string of list
- *
- * Return: The address of the new element
+ * add_node_end - adds a new node at the emd of a list_t list
+ * @head: adress current head of the list
+ * @str: string to store in new node
+ * Return: adress of new element, NULL if it failed
  */
-
 list_t *add_node_end(list_t **head, const char *str)
 {
-	int n, len_new = 0;
-	list_t *new = NULL, *tmp = *head;
+	list_t *new = malloc(sizeof(list_t));
+	unsigned int i = 0;
+	list_t *traverse = *head;
 
-	new = malloc(sizeof(list_t));
+	if (new == NULL)
+		return (NULL);
 
-	for (n = 0; str[n] != '\0'; n++)
+	if (str == NULL)
 	{
-		len_new++;
-	}
-
-	new->str = strdup(str);
-	new->len = length;
-	new->next = NULL;
-
-	if (new != NULL)
-	{
-		while (tmp->next != NULL)
-		{
-			tmp = tmp->next;
-		}
-		tmp->next = new;
+		new->str = NULL;
+		new->len = 0;
 	}
 	else
-		return (NULL);
+	{
+		new->str = strdup(str);
+		for (i = 0; str[i]; i++)
+			;
+		new->len = i;
+	}
+
+	new->next = NULL;
+
+	if (*head == NULL)
+		*head = new;
+	else
+	{
+		while (traverse->next != NULL)
+			traverse = traverse->next;
+		(traverse)->next = new;
+	}
 
 	return (new);
 }
