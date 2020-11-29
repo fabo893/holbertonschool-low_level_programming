@@ -1,9 +1,10 @@
 #include "lists.h"
+
+
 /**
- * list_len - determines the number of elements
- * in a linked list_t list
- * @h: head of list of node fron which to start counting
- * Return: count of linked elements
+ * print_list - prints all the elements of a list_t list
+ * @h: head of the list
+ * Return: the numbers of nodes
  */
 size_t print_list(const list_t *h)
 {
