@@ -40,4 +40,10 @@ dlistint_t *add_dnodeint_end(dlistint_t **head, const int n);
 /* TASK #4 */
 void free_dlistint(dlistint_t *head);
 
+
+/* TASK #5 */
+dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index);
+
+
+
 #endif /* LISTS_H */
