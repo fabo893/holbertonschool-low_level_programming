@@ -1,63 +1,58 @@
 #include "holberton.h"
 
-
-/**
- * _strlen - returns th length of a string.
- * @s: parameter
- * Return: always zero
- */
-int _strlen(char *s)
+unsigned int len(char *str)
 {
-	int x;
+	unsigned int idx;
 
-	for (x = 0; s[x] != '\0'; )
-		x++;
+	for (idx = 0; str[idx] != '\0';)
+	{
+		idx++;
+	}
 
-	return (x);
+	return (idx);
 }
 
-
-/**
- * *string_nconcat- concatenates two strings
- * @s1: first string
- * @s2: second string
- * @n: number of bytes to concatenate.
- *
- * Return: pointer of a newly location
- */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	char *array;
-/*	char *str; */
+	char *str;
+	unsigned int len_s1;
+	unsigned int sum_len;
 	unsigned int idx;
-	unsigned int len;
-	unsigned int idx2;
+	unsigned int i;
 
-	len = _strlen(s2);
-
-	array = malloc(sizeof(char) * n);
-	if (array == NULL)
+	if (s2 == NULL)
 	{
-		free(array);
+		n = 0;
+	}
+	else if ((len(s2)) <= n)
+	{
+		n = len(s2);
+	}
+	else
+	{
+		n = n;
+	}
+
+
+	len_s1 = len(s1);
+	sum_len = (len_s1 + n) + 1;
+
+	str = malloc(sizeof(char) * sum_len);
+	if (str == NULL)
+	{
 		return (NULL);
 	}
 
-	for (idx = 0; s1[idx] != '\0'; idx++)
+	for (idx = 0; idx < len_s1; idx++)
 	{
-		array[idx] = s1[idx];
+		str[idx] = s1[idx];
 	}
 
-	idx2 = idx;
-
-	if (n >= len)
-		n = len;
-
-	for (idx = 0; idx < n; idx++, idx2++)
+	for (i = 0; i < n; i++, idx++)
 	{
-		array[idx2] = s2[idx];
+		str[idx] = s2[i];
 	}
+	str[idx] = '\0';
 
-	array[idx2] = '\0';
-
-	return (array);
+	return (str);
 }
