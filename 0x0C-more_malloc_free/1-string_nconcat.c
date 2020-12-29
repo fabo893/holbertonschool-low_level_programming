@@ -1,5 +1,10 @@
 #include "holberton.h"
 
+/**
+ * len - function for take the length of a string.
+ * @str: pointer to char that contains the string.
+ * Return: length of the string.
+ */
 unsigned int len(char *str)
 {
 	unsigned int idx;
@@ -12,6 +17,13 @@ unsigned int len(char *str)
 	return (idx);
 }
 
+/**
+ * *string_nconcat - pointer to char that concatenate two string in the heap.
+ * @s1: first string.
+ * @s2: second string.
+ * @n: number of bytes from s2 to concatenate to s1.
+ * Return: On success, a pointer to char that has the full string.
+ */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *str;
