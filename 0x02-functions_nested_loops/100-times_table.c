@@ -15,15 +15,26 @@ void print_times_table(int n)
 			for (y = 0; y <= n; y++)
 			{
 				mul = x * y;
-				if (y != 0)
+				if (mul > 99)
 				{
 					printf(", ");
-					if (mul <= 99)
-						printf(" ");
-					if (mul <= 9)
-						printf(" ");
+					printf("%d", mul);
 				}
-				printf("%d", mul);
+				else if (mul > 9)
+				{
+					printf(",");
+					printf(" ");
+					printf(" ");
+					printf("%d", mul);
+				}
+				else
+				{
+					printf(",");
+					printf(" ");
+					printf(" ");
+					printf(" ");
+					printf("%d", mul);
+				}
 			}
 			printf("\n");
 		}
