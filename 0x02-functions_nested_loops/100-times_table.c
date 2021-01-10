@@ -1,37 +1,22 @@
 #include "holberton.h"
 
-/**
- * print_times_table - prints the n times table
- * @n: the number of times to be print
- */
 void print_times_table(int n)
 {
-	int ver;
-	int hor;
-	int mul = 0;
+	int x, y, mul;
 
-	if (n <= 15 && n >= 0)
+	if (n >= 0 && n <= 15)
 	{
-		for (ver = 0; ver <= n; ver++)
+		for (x = 0; x <= n; x++)
 		{
-			for (hor = 0; hor <= n; hor++)
+			for (y = 0; y <= n; y++)
 			{
-				mul = ver * hor;
-				if (hor != 0 && hor <= n)
+				mul = x * y;
+				if (y != 0)
 				{
-					printf(",");
+					printf(", ");
+					if (mul <= 99)
+						printf(" ");
 					if (mul <= 9)
-					{
-						printf(" ");
-						printf(" ");
-						printf(" ");
-					}
-					else if (mul >= 10 && mul <= 99)
-					{
-						printf(" ");
-						printf(" ");
-					}
-					else
 						printf(" ");
 				}
 				printf("%d", mul);
