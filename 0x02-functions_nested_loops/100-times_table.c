@@ -1,10 +1,7 @@
 #include "holberton.h"
 
-/**
- * print_times_table - prints the n times table.
- * @n: the n time to be print.
- */
-void print_times_table(int n)
+
+void helper_times(int n)
 {
 	int x, y, mul = 0;
 
@@ -37,4 +34,15 @@ void print_times_table(int n)
 			printf("\n");
 		}
 	}
+}
+
+
+
+/**
+ * print_times_table - prints the n times table.
+ * @n: the n time to be print.
+ */
+void print_times_table(int n)
+{
+	helper_times(n);
 }
