@@ -6,7 +6,7 @@
  */
 void print_times_table(int n)
 {
-	int x, y;
+	int x, y, mul = 0;
 
 	if (n >= 0 && n <= 15)
 	{
@@ -14,8 +14,27 @@ void print_times_table(int n)
 		{
 			for (y = 0; y <= n; y++)
 			{
-				_putchar(y + '0');
+				mul = x * y;
+				if (y != 0)
+				{
+					if (mul >= 0 && mul <= 9)
+					{
+						printf(",   %d", mul);
+					}
+					else if (mul >= 10 && mul <= 99)
+					{
+						printf(",  %d", mul);
+					}
+					else
+					{
+						printf(", %d", mul);
+					}
+				} else
+				{
+					printf("%d", mul);
+				}
 			}
+			printf("\n");
 		}
 	}
 }
