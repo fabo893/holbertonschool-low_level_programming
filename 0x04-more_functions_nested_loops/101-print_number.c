@@ -1,35 +1,12 @@
 #include "holberton.h"
 
 /**
-  * print_int - print INT_MIN
-  * @n: number
-  */
-void print_int(int n)
-{
-	if (n == INT_MIN)
-	{
-		_putchar(50);
-		_putchar(49);
-		_putchar(52);
-		_putchar(55);
-		_putchar(52);
-		_putchar(56);
-		_putchar(51);
-		_putchar(54);
-		_putchar(52);
-		_putchar(56);
-	}
-}
-
-
-
-/**
   * print_helper - print the number given
   * @n: number
   */
 void print_helper(int n)
 {
-        int idx, num, ls[18];
+	int idx, num, ls[15];
 
 	for (idx = 0; n != 0; idx++)
 	{
@@ -43,6 +20,7 @@ void print_helper(int n)
 	{
 		_putchar(ls[idx] + '0');
 	}
+
 }
 
 
@@ -52,21 +30,15 @@ void print_helper(int n)
   */
 void print_number(int n)
 {
+	if (n == 0)
+		_putchar('0');
 
-        if (n == 0)
-                _putchar('0');
-
-        if (n < 0)
-        {
-                _putchar(45);
-                n = (n * -1);
-        }
-	if (n == INT_MIN)
+	if (n < 0)
 	{
-		print_int(n);
+		_putchar(45);
+		n = (n * -1);
 	}
-	else
-        	print_helper(n);
+
+	print_helper(n);
 
 }
-
