@@ -16,22 +16,35 @@ void helper_times(int n)
 				{
 					if (mul >= 0 && mul <= 9)
 					{
-						printf(",   %d", mul);
+						_putchar(',');
+						_putchar(' ');
+						_putchar(' ');
+						_putchar(' ');
+						_putchar(mul + '0');
 					}
 					else if (mul >= 10 && mul <= 99)
 					{
-						printf(",  %d", mul);
+						_putchar(',');
+						_putchar(' ');
+						_putchar(' ');
+						_putchar((mul / 10) + '0');
+						_putchar((mul % 10) + '0');
 					}
 					else
 					{
-						printf(", %d", mul);
+						_putchar(',');
+						_putchar(' ');
+						_putchar((mul / 100) + '0');
+						mul = mul % 100;
+						_putchar((mul / 10) + '0');
+						_putchar((mul % 10) + '0');
 					}
 				} else
 				{
-					printf("%d", mul);
+					_putchar(mul + '0');
 				}
 			}
-			printf("\n");
+			_putchar('\n');
 		}
 	}
 }
