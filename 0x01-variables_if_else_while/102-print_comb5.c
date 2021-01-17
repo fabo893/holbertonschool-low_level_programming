@@ -4,7 +4,7 @@
  * print_help - helper to print the numbers
  * @n: number to be printed
  */
-void print_help(n)
+void print_help(int n)
 {
 	int zero = 0;
 
