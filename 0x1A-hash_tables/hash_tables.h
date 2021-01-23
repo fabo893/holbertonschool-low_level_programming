@@ -41,7 +41,8 @@ hash_table_t *hash_table_create(unsigned long int size);
 /* TASK #1 */
 unsigned long int hash_djb2(const unsigned char *str);
 
-
+/* TASK #2 */
+unsigned long int key_index(const unsigned char *key, unsigned long int size);
 
 #endif /* HASH_TABLES */
 
