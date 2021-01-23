@@ -38,6 +38,10 @@ typedef struct hash_table_s
 /* TASK #0 */
 hash_table_t *hash_table_create(unsigned long int size);
 
+/* TASK #1 */
+unsigned long int hash_djb2(const unsigned char *str);
+
+
 
 #endif /* HASH_TABLES */
 
