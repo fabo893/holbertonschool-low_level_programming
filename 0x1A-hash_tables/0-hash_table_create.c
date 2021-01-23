@@ -9,12 +9,20 @@
 hash_table_t *hash_table_create(unsigned long int size)
 {
 
-	hash_table_t *table;
+	hash_table_t *tb;
+	unsigned long int idx;
 
-	table = malloc(sizeof(unsigned long int) * size);
-	if (table == NULL)
+	tb = malloc(sizeof(hash_table_t));
+	if (tb == NULL)
 		return (NULL);
 
-	return (table);
+	(*tb).array = malloc(sizeof(hash_node_t *) * size);
+	if ((*tb).array == NULL)
+		return (NULL);
+
+	for (idx = 0; idx < size; idx++)
+		(*tb).array = NULL;
+
+	return (tb);
 }
 
