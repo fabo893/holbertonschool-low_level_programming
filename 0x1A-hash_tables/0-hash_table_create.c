@@ -18,12 +18,12 @@ hash_table_t *hash_table_create(unsigned long int size)
 
 	(*tb).size = size;
 
-	(*tb).array = malloc(sizeof(hash_node_t *) * size);
+	(*tb).array = malloc(sizeof(hash_node_t) * size);
 	if ((*tb).array == NULL)
 		return (NULL);
 
 	for (idx = 0; idx < size; idx++)
-		(*tb).array = NULL;
+		(*tb).array[idx] = NULL;
 
 	return (tb);
 }
