@@ -16,7 +16,7 @@ int hash_checker(hash_node_t *array, const char *key, const char *value)
 	old = array;
 	for (ix = 0; old != NULL; ix++)
 	{
-		if ((*old).key == key)
+		if (strcmp(key, (*old).key) == 0)
 		{
 			(*old).value = strdup(value);
 				return (1);
