@@ -18,8 +18,6 @@ int hash_checker(hash_node_t *array, const char *key, const char *value)
 	{
 		if ((*old).key == key)
 		{
-			if ((*old).value == value)
-				return (1);
 			(*old).value = strdup(value);
 				return (1);
 		}
