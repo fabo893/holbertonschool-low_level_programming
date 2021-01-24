@@ -61,8 +61,8 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	if (node == NULL)
 		return (0);
 
-	(*node).key = (char *)key;
-	(*node).value = (char *)value;
+	(*node).key = strdup(key);
+	(*node).value = strdup(value);
 	if ((*ht).array[kidx] != NULL)
 		(*node).next = (*ht).array[kidx];
 	else
