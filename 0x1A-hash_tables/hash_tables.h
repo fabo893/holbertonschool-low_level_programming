@@ -50,6 +50,9 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value);
 /* TASK #4 */
 char *hash_table_get(const hash_table_t *ht, const char *key);
 
+/* TASK #5 */
+void hash_table_print(const hash_table_t *ht);
+
 
 #endif /* HASH_TABLES */
 
