@@ -7,7 +7,7 @@
  */
 int main(void)
 {
-	unsigned int long counter, fn, sn, res, sum;
+	unsigned int long fn, sn, res, sum;
 
 	sum = 2;
 	fn = 1;
