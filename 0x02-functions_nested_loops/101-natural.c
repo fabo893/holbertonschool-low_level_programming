@@ -8,14 +8,14 @@ int main(void)
 {
 	int sum, nat;
 
-	for (nat = 0; nat < 1024; nat++)
+	for (nat = 1; nat < 1024; nat++)
 	{
-		if (nat % 15 == 0)
-			sum += nat;
 		if (nat % 5 == 0)
 			sum += nat;
-		if (nat % 3 == 0)
+		else if (nat % 3 == 0)
 			sum += nat;
+		else
+			sum += 0;
 	}
 	printf("%d\n", sum);
 
