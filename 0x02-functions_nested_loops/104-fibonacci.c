@@ -15,7 +15,7 @@ int main(void)
 	for (i = 1; i < 97; i++)
 	{
 		if (i > 1)
-			printf(", ");
+			printf(",");
 		res = tmp + x;
 		printf("%lu", res);
 		tmp = x;
