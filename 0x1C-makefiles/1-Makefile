@@ -1,5 +1,5 @@
-CC = gcc
-SRC = *.c
+CC := gcc
+SRC := *.c
 
-all: ${BINS}
-	 ${CC} ${SRC} -o holberton
+all:
+	 $(CC) $(SRC) -o holberton
