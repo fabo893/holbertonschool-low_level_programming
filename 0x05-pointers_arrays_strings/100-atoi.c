@@ -9,15 +9,16 @@
 
 int _atoi(char *s)
 {
-	int i = 0, convert = 0;
+	int i = 0, convert = 0, neg = -1;
 
-	for (i = 0; s[i] != '\0'; ++i)
+	while (s[i] != '\0' && (s[i] < '0' || s[i] > '9'))
 	{
-		convert = convert * 10 + s[i] - '0';
+		if (s[i] == '-')
+			neg *= -1;
+		i++;
 	}
 
-	if (*s == '\0')
-		return (0);
-
-	return (convert);
+	while (s[i] != '\0' && (s[i] >= '0' && s[i] <= '9'))
+		convert = (convert * 10) - (s[i++] - '0');
+	return (convert * neg);
 }
