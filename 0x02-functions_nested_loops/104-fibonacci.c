@@ -11,7 +11,6 @@ int main(void)
 
 	tmp = 1;
 	x = 0;
-	// printf("%llu, %llu, ", tmp, x);
 	for (i = 1; i <= 98; i++)
 	{
 		if (i > 1)
