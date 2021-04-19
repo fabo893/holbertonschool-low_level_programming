@@ -1,20 +1,27 @@
 #include <stdio.h>
 
 /**
- * print_help - helper to print the numbers
+ * print_help - helper to print numbers
+ *
  * @n: number to be printed
  */
 void print_help(int n)
 {
-	int zero = 0;
+	int ax1 = 0, ax2 = 0;
 
 	if (n <= 9)
-		printf("%d", zero);
-
-	printf("%d", n);
+	{
+		putchar('0');
+		putchar('0' + n);
+	}
+	else
+	{
+		ax1 = n / 10;
+		ax2 = n % 10;
+		putchar('0' + ax1);
+		putchar('0' + ax2);
+	}
 }
-
-
 
 /**
  * main - main function
@@ -23,15 +30,15 @@ void print_help(int n)
  */
 int main(void)
 {
-	int i, x;
+	int i, ii;
 
 	for (i = 0; i <= 97; i++)
 	{
-		for (x = i + 1; x <= 99; x++)
+		for (ii = i + 1; ii <= 99; ii++)
 		{
 			print_help(i);
 			putchar(' ');
-			print_help(x);
+			print_help(ii);
 			putchar(',');
 			putchar(' ');
 		}
