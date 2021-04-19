@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <unistd.h>
 
 /**
  * print_help - helper to print numbers
@@ -47,7 +48,7 @@ int main(void)
 	putchar(' ');
 	print_help(99);
 
-	putchar('\n');
+	printf("\n");
 
 	return (0);
 }
