@@ -7,17 +7,17 @@
  */
 int main(void)
 {
-	unsigned long int i, x, res, tmp;
+	unsigned long long int i, x, res, tmp;
 
 	tmp = 1;
-	x = 2;
-	printf("%lu, %lu, ", tmp, x);
-	for (i = 1; i <= 96; i++)
+	x = 0;
+	// printf("%llu, %llu, ", tmp, x);
+	for (i = 1; i <= 98; i++)
 	{
 		if (i > 1)
 			printf(", ");
 		res = tmp + x;
-		printf("%lu", res);
+		printf("%llu", res);
 		tmp = x;
 		x = res;
 	}
