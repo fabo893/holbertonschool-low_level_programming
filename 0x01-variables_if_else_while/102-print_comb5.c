@@ -47,5 +47,7 @@ int main(void)
 	putchar(' ');
 	print_help(99);
 
+	putchar('\n');
+
 	return (0);
 }
