@@ -7,7 +7,7 @@
  */
 int main(void)
 {
-	unsigned int long i, x, res, tmp;
+ 	unsigned long int i, x, res, tmp;
 
 	tmp = 1;
 	x = 2;
@@ -15,7 +15,7 @@ int main(void)
 	for (i = 1; i < 96; i++)
 	{
 		if (i > 1)
-			printf(",");
+			printf(", ");
 		res = tmp + x;
 		printf("%lu", res);
 		tmp = x;
